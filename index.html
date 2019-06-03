@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Energy clicker</title><!--ВСЕГО ТУТ 517 СТРОК-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="font-family: cursive">
+	<div class="col-12 bg-secondary">
+		<div class="lel bg-dark" style="display: none; height: 1000px;">
+			<h1 style="color: red; font-size: 300px;">ЭТО КОНЕЦ!!!</h1>
+		</div>
+		<div class="row">
+			<div class="col-4 bg-secondary p-0"><!--Левое меню-->
+				<div class="pt-4">
+					<div class="row ml-5"><h4 class="score mt-0">0</h4><h4>-KW</h4></div>
+				</div>
+				<div class="bg-warning d-inline-block"></div><!--Перегородка-->
+				<div>
+					<div class="col-12 text-center pt-5">
+						<img src="energy.png" class="en_but">
+					</div>
+				</div>
+			</div>
+					<div class="col-4"><!--Upgrades-->
+						<div class="bg-danger mt-1"><!--Windmill-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="Windmill.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">Ветряная Электростанция</p>
+									<p class="my-0">Цена 100</p>
+									<p>1KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_wind">
+										Купить Ветряк
+									</button>
+									<div class="text-primary"><p class="my-0">Есть ветряков<p class="Windmills">0</p></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1"><!--SolPan-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="SolarPanel.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">Солнечная панель</p>
+									<p class="my-0">Цена 500</p>
+									<p>5KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_SolPan">
+										Купить солпан
+									</button>
+									<div class="text-primary"><p class="my-0">Есть панелей<p class="SolPans">0</p></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1"><!--HES-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="GES.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">ГЭС</p>
+									<p class="my-0">Цена 1k</p>
+									<p>10KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_HES">
+										Купить ГЭС
+									</button>
+									<div class="text-primary"><p class="my-0">Есть ГЭС<p class="HESs">0</p></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1"><!--Coal-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="Coal.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">Угольная Электростанция</p>
+									<p class="my-0">Цена 5k</p>
+									<p>50KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_Coal">
+										Купить УЭС
+									</button>
+									<div class="text-primary"><p class="my-0">Есть УЭС<p class="Coals">0</p></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1"><!--Oil-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="Oil.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">Нефтяная Электростанция</p>
+									<p class="my-0">Цена 10k</p>
+									<p>100KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_Oil">
+										Купить НЭС
+									</button>
+									<div class="text-primary"><p class="my-0">Есть НЭС<p class="Oils">0</p></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1"><!--Nuke-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="Nuke.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">АЭС</p>
+									<p class="my-0">Цена 50k</p>
+									<p>500KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_Nuke">
+										Купить АЭС
+									</button>
+									<div class="text-primary"><p class="my-0">Есть АЭС<p class="Nukes">0</p></p></div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1"><!--Bio-->
+							<div class="row">
+								<div class="bg-white col-3 px-0 border border-primary"><!--Картинка-->
+									<img src="bioreactor.png" style="height: 100%; width: 100%">
+								</div>
+								<div class="col-4 bg-primary text-center">
+									<p class="my-0">Биореактор</p>
+									<p class="my-0">Цена 100k</p>
+									<p>1000KW</p>
+								</div>
+								<div class="col-5 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_Bio">
+										Купить БР
+									</button>
+									<div class="text-primary"><p class="my-0">Есть БР<p class="Bios">0</p></p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4"><!--Clicks-->
+						<div class="bg-danger mt-1 ml-4"><!--Доп.мощь-->
+							<div class="row">
+								<div class="col-6 bg-primary text-center">
+									<p class="my-0">Дополнительная мощность</p>
+									<p class="my-0">Цена 100</p>
+									<p>2KW</p>
+								</div>
+								<div class="col-6 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_DOP">
+										Купить Доп.Мощь
+									</button>
+									<p style="color: lightgreen" class="moj_DOP">Купить можно</p>
+									<p style="color: grey" class="nelz_DOP">Купить нельзя</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1 ml-4"><!--Подстанция-->
+							<div class="row">
+								<div class="col-6 bg-primary text-center">
+									<p class="my-0">Ряды подстанций</p>
+									<p class="my-0">Цена 1k</p>
+									<p>5KW</p>
+								</div>
+								<div class="col-6 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_POD">
+										Купить Подстанцию
+									</button>
+									<p style="color: lightgreen" class="moj_POD">Купить можно</p>
+									<p style="color: grey" class="nelz_POD">Купить нельзя</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1 ml-4"><!--Экономия-->
+							<div class="row">
+								<div class="col-6 bg-primary text-center">
+									<p class="my-0">Экономия</p>
+									<p class="my-0">Цена 5k</p>
+									<p>10KW</p>
+								</div>
+								<div class="col-6 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_EKO">
+										Купить Экономию
+									</button>
+									<p style="color: lightgreen" class="moj_EKO">Купить можно</p>
+									<p style="color: grey" class="nelz_EKO">Купить нельзя</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1 ml-4"><!--Новые технологии-->
+							<div class="row">
+								<div class="col-6 bg-primary text-center">
+									<p class="my-0">Новые технологии</p>
+									<p class="my-0">Цена 30k</p>
+									<p>20KW</p>
+								</div>
+								<div class="col-6 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_NEW">
+										Купить Технологии
+									</button>
+									<p style="color: lightgreen" class="moj_NEW">Купить можно</p>
+									<p style="color: grey" class="nelz_NEW">Купить нельзя</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1 ml-4"><!--Соседняя область-->
+							<div class="row">
+								<div class="col-6 bg-primary text-center">
+									<p class="my-0">Соседняя область</p>
+									<p class="my-0">Цена 500k</p>
+									<p>100KW</p>
+								</div>
+								<div class="col-6 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_SOS">
+										Подкуп соседа
+									</button>
+									<p style="color: lightgreen" class="moj_SOS">Купить можно</p>
+									<p style="color: grey" class="nelz_SOS">Купить нельзя</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-danger mt-1 ml-4"><!--Пройти игру-->
+							<div class="row">
+								<div class="col-6 bg-primary text-center">
+									<p class="my-0">Пройти игру</p>
+									<p class="my-0">Цена 1m</p>
+									<p>??????KW</p>
+								</div>
+								<div class="col-6 bg-dark text-center">
+									<button class="btn btn-primary col-11 mt-2 btn_NET">
+										Конец
+									</button>
+									<p style="color: red">НИНАДА</p>
+									<p style="color: red">НИЕТ НЕ ТЫКАЙ</p>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let score = document.querySelector(".score")
+		let energy = 0
+		let en = document.querySelector(".en_but")
+		let Wind = document.querySelector(".btn_wind")
+		let WindScore = document.querySelector(".Windmills")
+		let Winds = 0
+		let Sol = document.querySelector(".btn_SolPan")
+		let SolScore = document.querySelector(".SolPans")
+		let SolPans = 0
+		let HES = document.querySelector(".btn_HES")
+		let HESScore = document.querySelector(".HESs")
+		let HESs = 0
+		let Coal = document.querySelector(".btn_Coal")
+		let CoalScore = document.querySelector(".Coals")
+		let Coals = 0
+		let Oil = document.querySelector(".btn_Oil")
+		let OilScore = document.querySelector(".Oils")
+		let Oils = 0
+		let Nuke = document.querySelector(".btn_Nuke")
+		let NukeScore = document.querySelector(".Nukes")
+		let Nukes = 0
+		let Bio = document.querySelector(".btn_Bio")
+		let BioScore = document.querySelector(".Bios")
+		let Bios = 0
+
+		let DOP = document.querySelector(".btn_DOP")
+		let DOPM = document.querySelector(".moj_DOP")
+		let DOPN = document.querySelector(".nelz_DOP")
+
+		let POD = document.querySelector(".btn_POD")
+		let PODM = document.querySelector(".moj_POD")
+		let PODN = document.querySelector(".nelz_POD")
+
+		let EKO = document.querySelector(".btn_EKO")
+		let EKOM = document.querySelector(".moj_EKO")
+		let EKON = document.querySelector(".nelz_EKO")
+
+		let NEW = document.querySelector(".btn_NEW")
+		let NEWM = document.querySelector(".moj_NEW")
+		let NEWN = document.querySelector(".nelz_NEW")
+
+		let SOS = document.querySelector(".btn_SOS")
+		let SOSM = document.querySelector(".moj_SOS")
+		let SOSN = document.querySelector(".nelz_SOS")
+
+		let NET = document.querySelector(".btn_NET")
+		let lel = document.querySelector(".lel")
+
+		fy = function(arg){
+			energy = energy + arg
+			score.innerHTML = energy
+		}
+		let time = function(){
+			score.innerHTML = energy
+		}
+		setInterval(time,100)
+
+		en.onclick = function(){
+			fy(1)
+		}
+
+		DOP.onclick = function(){
+			if (energy>=100){
+				en.onclick = function(){
+					fy(2)
+				}
+				energy = energy - 100
+				score.innerHTML = energy
+				DOPM.style.color = "grey"
+				DOPN.style.color = "red"
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+
+		POD.onclick = function(){
+			if (energy>=1000){
+				en.onclick = function(){
+					fy(5)
+				}
+				energy = energy - 1000
+				score.innerHTML = energy
+				PODM.style.color = "grey"
+				PODN.style.color = "red"
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+
+		EKO.onclick = function(){
+			if (energy>=5000){
+				en.onclick = function(){
+					fy(10)
+				}
+				energy = energy - 5000
+				score.innerHTML = energy
+				EKOM.style.color = "grey"
+				EKON.style.color = "red"
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+
+		NEW.onclick = function(){
+			if (energy>=30000){
+				en.onclick = function(){
+					fy(20)
+				}
+				energy = energy - 30000
+				score.innerHTML = energy
+				NEWM.style.color = "grey"
+				NEWN.style.color = "red"
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+
+		SOS.onclick = function(){
+			if (energy>=500000){
+				en.onclick = function(){
+					fy(100)
+				}
+				energy = energy - 500000
+				score.innerHTML = energy
+				SOSM.style.color = "grey"
+				SOSN.style.color = "red"
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+
+		NET.onclick = function(){
+			if (energy>=1000000){
+				lel.style.display = "block"
+				energy = energy - 1000000
+				score.innerHTML = energy
+			}
+			else{
+				alert("ХАХАХХА")
+			}
+		}
+
+		Wind.onclick = function(){
+			if (energy>=100){
+				Winds = Winds + 1
+				WindScore.innerHTML = Winds
+				energy = energy - 100
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 1
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+		Sol.onclick = function(){
+			if (energy>=500){
+				SolPans = SolPans + 1
+				SolScore.innerHTML = SolPans
+				energy = energy - 500
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 5
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+		HES.onclick = function(){
+			if (energy>=1000){
+				HESs = HESs + 1
+				HESScore.innerHTML = HESs
+				energy = energy - 1000
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 10
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+		Coal.onclick = function(){
+			if (energy>=5000){
+				Coals = Coals + 1
+				CoalScore.innerHTML = Coals
+				energy = energy - 5000
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 50
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+		Oil.onclick = function(){
+			if (energy>=10000){
+				Oils = Oils + 1
+				OilScore.innerHTML = Oils
+				energy = energy - 10000
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 100
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+		Nuke.onclick = function(){
+			if (energy>=50000){
+				Nukes = Nukes + 1
+				NukeScore.innerHTML = Nukes
+				energy = energy - 50000
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 500
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+		Bio.onclick = function(){
+			if (energy>=100000){
+				Bios = Bios + 1
+				BioScore.innerHTML = Bios
+				energy = energy - 100000
+				score.innerHTML = energy
+				let time = function(){
+					energy = energy + 1000
+					score.innerHTML = energy
+				}
+				setInterval(time,1000)
+			}
+			else{
+				alert("Денег нет, но вы держитесь!")
+			}
+		}
+	</script>
+</body>
+</html>
